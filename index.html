@@ -8,6 +8,7 @@
 <meta name="robots" content="index, follow">
   <meta charset="UTF-8">
   <title>Code Cortex</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -172,7 +173,57 @@
   object-fit: cover;
   border: 2px solid #ffe27d;
 }
+.social-bar {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 200;
+  }
 
+  .social-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: #2f3243;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .social-bar a:hover {
+    background-color: #ffe27d;
+    color: #000;
+    transform: scale(1.1);
+  }
+
+  /* Tooltip styling */
+  .social-bar a span {
+    position: absolute;
+    left: 55px;
+    background-color: #2f3243;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, left 0.3s;
+    font-size: 14px;
+  }
+
+  .social-bar a:hover span {
+    opacity: 1;
+    left: 60px;
+  }
 
 
   </style>
@@ -284,8 +335,27 @@
       document.body.className = theme;
     }
   </script>
+  <div class="social-bar">
+  <a href="https://www.linkedin.com/in/yourusername" target="_blank">
+    <i class="fab fa-linkedin-in"></i>
+    <span>LinkedIn Profile</span>
+  </a>
+  <a href="https://wa.me/923157227688" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span>Chat on WhatsApp</span>
+  </a>
+  <a href="https://www.facebook.com/yourusername" target="_blank">
+    <i class="fab fa-facebook-f"></i>
+    <span>Facebook Page</span>
+  </a>
+  <a href="mailto:codecortexpk@gmail.com">
+    <i class="fas fa-envelope"></i>
+    <span>Send Email</span>
+  </a>
+</div>
 </body>
 </html>
+
 
 
 
